@@ -35,6 +35,10 @@ to_check = {(x, y)
             for y in range(len(grid[0]))
             if grid[x][y] != 9}
 
+## TODO:
+# (1) use a `deque` + a `seen` set instead of a `to_check` set
+# (2) start from the lowpoints (guaranteed to give all basins)
+
 basins = []
 while to_check:
     # create the first basin
