@@ -73,7 +73,7 @@ while subroutes:
 print("part 1:", len(complete_routes))
 
 # part 2
-# this looks exactly like part 1, but with another `extend` method
+# the only difference with part 1 is the 'extend' method
 subroutes = [[caves["start"]]]
 complete_routes = []
 while subroutes:
