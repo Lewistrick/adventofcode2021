@@ -27,6 +27,8 @@ def pathfind(grid):
     to a size of i+j for an i*j grid (in part 2, i=j=500), which would make
     searching in a list become very slow. Instead, we find the lowest score
     using min() and grab a random position to expand from.
+    (I realized later that I implemented a simplified version of the
+    priority queue algorithm, which I could have used the heapq library for.)
 
     Once we arrive at a neighbor of the starting position of the ship (0, 0),
     we know we have found the shortest route from the starting position.
