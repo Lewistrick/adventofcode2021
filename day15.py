@@ -36,12 +36,12 @@ def pathfind(grid):
     we don't add the starting positions's value to the total score.
     """
     # start at the bottom right (ending position)
-    startpos = tuple(n-1 for n in grid.shape)
+    destination = tuple(n-1 for n in grid.shape)
     bestroutes = np.full(grid.shape, np.nan)
-    bestroutes[startpos] = grid[startpos]
+    bestroutes[destination] = grid[destination]
     # stack contains {score: [positions]} mappings
     # so we can find the lowest number quickly
-    stack = defaultdict(set, {int(bestroutes[startpos]): {startpos}})
+    stack = defaultdict(set, {int(bestroutes[destination]): {destination}})
     while stack:
         lowest_dist = min(stack)
         if not stack[lowest_dist]:
